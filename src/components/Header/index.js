@@ -3,7 +3,7 @@ import styles from './Header.module.css'
 export default function Header() {
   return (
     <header>
-      <div>
+      <div className={styles.header}>
           <picture>
               <a href=''><img src='./logo.PNG'/></a>
           </picture>
@@ -11,7 +11,7 @@ export default function Header() {
           <nav>
             <a href='#'>Produtos</a>
             <a href='#'>Sobre</a>
-            <a href='#'>Contto</a>
+            <a href='#'>Contato</a>
           </nav>
       </div>
     </header>

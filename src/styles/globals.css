@@ -13,3 +13,12 @@ img {
   object-fit: cover;
 }
 
+body {
+  margin: 0; 
+  padding: 0;
+}
+
+header {
+  margin: 0; 
+  padding: 0;
+}
