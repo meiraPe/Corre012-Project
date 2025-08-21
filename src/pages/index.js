@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import Header from '@/components/Header'
 import Banner from '@/components/Banner'
+import Products from '@/components/Products';
 
 
 export default function Home() {
@@ -17,6 +18,11 @@ export default function Home() {
       <section>
         <Banner/>
       </section>
+
+      <section>
+        <Products/>
+      </section>
+      
     </>
   );
 }

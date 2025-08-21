@@ -1,4 +1,5 @@
 import styles from './Header.module.css'
+import React from 'react';
 
 export default function Header() {
   return (
@@ -9,7 +10,7 @@ export default function Header() {
           </picture>
 
           <nav>
-            <a href='#'>Produtos</a>
+            <a href='#Products'>Produtos</a>
             <a href='#'>Sobre</a>
             <a href='#'>Contato</a>
           </nav>
