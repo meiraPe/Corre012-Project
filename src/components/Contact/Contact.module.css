@@ -1,0 +1,66 @@
+.footer {
+  background: linear-gradient(135deg, #012363 0%, #0A0F1F 100%);
+  color: #fff;
+  padding: 3rem 4rem 1.5rem;
+  margin-top: 0;
+}
+
+.contactContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contactContainer h2 {
+  color: #C6A645;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.contactContainer p {
+  margin-bottom: 2rem;
+  color: #ddd;
+}
+
+.contactGrid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contactCard {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  min-width: 200px;
+  flex: 1;
+  max-width: 300px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.contactCard:hover {
+  transform: translateY(-5px);
+}
+
+.contactCard h3 {
+  color: #C6A645;
+  margin-bottom: 0.5rem;
+}
+
+.copy {
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .contactGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+}

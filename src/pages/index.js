@@ -3,6 +3,8 @@ import styles from "@/styles/Home.module.css";
 import Header from '@/components/Header'
 import Banner from '@/components/Banner'
 import Products from '@/components/Products';
+import About from "@/components/About";
+import Contact from "@/components/Contact";
 
 
 export default function Home() {
@@ -22,7 +24,14 @@ export default function Home() {
       <section>
         <Products/>
       </section>
-      
+
+      <section>
+        <About/>
+      </section>
+
+      <section>
+        <Contact/>
+      </section>
     </>
   );
 }

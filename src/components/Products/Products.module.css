@@ -1,139 +1,130 @@
-
 .productContainer {
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+  background: #0A0F1F;
+}
+
+.productSection {
+  max-width: 1200px;
+  width: 100%;
+  background: rgba(10, 15, 31, 0.7); /* vidro */
+  border-radius: 20px;
+  padding: 3rem;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
 }
 
 .titleProduct {
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 25px;
+  margin-bottom: 3rem;
 }
 
 .titleProduct h2 {
-  text-align: center;
-  font-size: 3.5rem;
-  margin-bottom: 25px;
-  color: #0A0F1F;
-  font-weight: 700;
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #C6A645;
+  margin-bottom: 1rem;
 }
 
 .titleProduct p {
-  font-size: 1.2rem;
-  color: #0A0F1F;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-bottom: 0.5rem;
 }
 
-.product_img {
+.productGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 25px;
-  margin: 50px 0;
-}
-
-.card_product picture {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.card_product picture img {
-  width: 90%;
-  height: 500px;
-  object-fit: cover;
-  transition: 0.3s ease-in-out;
-  border-radius: 10px;
-  overflow: hidden;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
 }
 
 .card_product {
-  border-radius: 10px;
-  align-items: center;
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
-  border: 1px solid transparent;
+  text-align: center;
+  padding: 1.5rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
 .card_product:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+}
+
+.card_product picture img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
 }
 
 .card_product h3 {
   font-size: 1.4rem;
-  margin-bottom: 15px;
-  font-weight: bold;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #0A0F1F;
+  font-weight: 700;
+  color: #C6A645;
+  margin: 0.5rem 0;
 }
 
 .card_product .price {
-  font-weight: bold;
-  font-weight: 1.3rem;
-  margin-top: 30px;
-  color: #012363;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  color: #fff;
+  margin: 0.5rem 0 1rem 0;
+  font-size: 1.1rem;
 }
 
 .card_product .button {
-  margin-top: 0px;
-  margin-bottom: 30px;
-  text-decoration: none;
-  display: inline-block;
-  background-color: #f2f2f2;
-  color: #0A0F1F;
   padding: 12px 25px;
-  border-radius: 30px;
-  cursor: pointer;
+  font-weight: 700;
   font-size: 1rem;
-  font-weight: bold;
+  border-radius: 30px;
+  background: #C6A645;
+  border: none;
+  color: #0A0F1F;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .card_product .button:hover {
-  background-color: #C6A645;
-  color: #f2f2f2;
+  background: #fff;
+  color: #0A0F1F;
   transform: translateY(-2px);
 }
 
-.card_product .stampNovo {
+.stampNovo, .stampU {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  background-color: #C6A645;
-  color: #f2f2f2;
-  padding: 5px 10px;
+  top: 12px;
+  left: 12px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
   border-radius: 5px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  z-index: 10;
-} 
-
-.card_product .stampU {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background-color: #b80808;
-  color: #f2f2f2;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  font-weight: bold;
+  color: #fff;
   z-index: 10;
 }
 
-/* Responsividade */
+.stampNovo {
+  background-color: #C6A645;
+}
 
-@media (max-width: 768px) {
-  .product_img {
-    grid-template-columns: 1fr; 
+.stampU {
+  background-color: #b80808;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .productGrid {
+    grid-template-columns: 1fr;
   }
 
   .card_product picture img {
-    height: 600px;
+    height: 450px;
   }
 
   .titleProduct h2 {
@@ -143,5 +134,4 @@
   .titleProduct p {
     font-size: 1rem;
   }
-  
 }
